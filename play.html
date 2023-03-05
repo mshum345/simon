@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Link to CSS File -->
-    <link rel="stylesheet" href="main.css" />
-
     <meta charset="UTF-8" />
-    <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Coolest Simon Game</title>
+    <title>Simon</title>
     <link rel="icon" href="favicon.ico" />
 
-    <!-- Include bootstrap CSS framework -->
+    <link rel="stylesheet" href="main.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,117 +16,56 @@
     />
   </head>
   <body class="bg-dark text-light">
-    <header>
-      <h1>The Coolest Simon Game<sup>&reg;</sup></h1>
-
-      <!-- Navigation menu -->
-      <nav>
-        <menu>
-          <li><a class="nav-link" href="index.html">Login</a></li>
-          <li><a class="nav-link" href="play.html">Play</a></li>
-          <li><a class="nav-link" href="scores.html">Scores</a></li>
-          <li><a class="nav-link" href="about.html">About</a></li>
+    <header class="container-fluid">
+      <nav class="navbar fixed-top navbar-dark">
+        <a class="navbar-brand" href="#">Simon<sup>&reg;</sup></a>
+        <menu class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="play.html">Play</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="scores.html">Scores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
         </menu>
       </nav>
-      <hr />
     </header>
 
-    <main class="container-fluid bg-secondary text-center">
-      <!-- Player information -->
+    <main class="bg-secondary">
       <div class="players">
         Player:
-        <span class="player-name">Player name here</span>
-        <span class="player-team">Awesome Team name here</span>
+        <span class="player-name"></span>
       </div>
-
-      <!-- example tag of formatting with old style HTML -->
-      <br />
-
-      <div>
-        <label for="count">Score</label>
-        <input type="text" id="count" value="--" readonly />
-      </div>
-
-      <!-- Simon game -->
-      <br />
-
-      <div>
-        <button class="btn btn-primary">Reset</button>
-      </div>
-
-      <br />
-
-      <div>
-        <table>
-          <tr>
-            <td>
-              <button>
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 100 100"
-                  height="100"
-                  width="100"
-                >
-                  <!-- SVG
-                    M move <to x,y>
-                    Q quadratic curve <control point x,y> <to x,y>
-                -->
-                  <path d="M 95,5 95,95 5,95 Q 5,5 95,5" fill="green" />
-                </svg>
-              </button>
-            </td>
-            <td>
-              <button>
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 100 100"
-                  height="100"
-                  width="100"
-                >
-                  <path d="M5,5 5,95 95,95 Q 95,5 5,5" fill="red" />
-                </svg>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <button>
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 100 100"
-                  height="100"
-                  width="100"
-                >
-                  <path d="M5,5 95,5 95,95 Q 5,95 5,5" fill="blue" />
-                </svg>
-              </button>
-            </td>
-            <td>
-              <button>
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 100 100"
-                  height="100"
-                  width="100"
-                >
-                  <path d="M95,5 5,5 5,95 Q 95,95 95,5" fill="yellow" />
-                </svg>
-              </button>
-            </td>
-          </tr>
-        </table>
+      <div class="game">
+        <div class="button-container">
+          <!-- buttons are discovered in the JavaScript by selecting the game-button class -->
+          <!-- onclick triggers a button push interaction -->
+          <button id="green" class="game-button button-top-left" onclick="game.pressButton(this)"></button>
+          <button id="red" class="game-button button-top-right" onclick="game.pressButton(this)"></button>
+          <button id="yellow" class="game-button button-bottom-left" onclick="game.pressButton(this)"></button>
+          <button id="blue" class="game-button button-bottom-right" onclick="game.pressButton(this)"></button>
+          <div class="controls center">
+            <div class="game-name">Simon<sup>&reg;</sup></div>
+            <div id="score" class="score center">--</div>
+            <button class="btn btn-primary" onclick="game.reset()">Reset</button>
+          </div>
+        </div>
       </div>
     </main>
 
     <footer class="bg-dark text-dark text-muted">
-      <hr />
       <div class="container-fluid">
-        <span class="text-reset">Author: Mitchell Shumway</span>
-        <br />
-        <a class="text-reset" href="https://github.com/mshum345/simon.git">GitHub</a>
+        <span class="text-reset">Author Name(s)</span>
+        <a class="text-reset" href="https://github.com/webprogramming260/simon-javascript">Source</a>
       </div>
     </footer>
-    <!-- Link to JS File -->
+
+    <!-- Script is located at the bottom because it references HTML elements during initialization -->
     <script src="play.js"></script>
   </body>
 </html>

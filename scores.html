@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Link to CSS File -->
-    <link rel="stylesheet" href="main.css" />
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scores</title>
     <link rel="icon" href="favicon.ico" />
 
-    <!-- Include bootstrap CSS framework -->
+    <link rel="stylesheet" href="main.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,70 +16,51 @@
     />
   </head>
   <body class="bg-dark text-light">
-    <header>
-      <h1>The Coolest Simon Game<sup>&reg;</sup></h1>
-
-      <!-- Navigation menu -->
-      <nav>
-        <menu>
-          <li><a class="nav-link" href="index.html">Login</a></li>
-          <li><a class="nav-link" href="play.html">Play</a></li>
-          <li><a class="nav-link" href="scores.html">Scores</a></li>
-          <li><a class="nav-link" href="about.html">About</a></li>
+    <header class="container-fluid">
+      <nav class="navbar fixed-top navbar-dark">
+        <a class="navbar-brand" href="#">Simon<sup>&reg;</sup></a>
+        <menu class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="play.html">Play</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="scores.html">Scores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
         </menu>
       </nav>
-
-      <hr />
     </header>
 
     <main class="container-fluid bg-secondary text-center">
-      <table class="table table-dark table-striped-columns">
-        <!-- Header of score table -->
-        <thead>
+      <table class="table table-warning table-striped-columns">
+        <thead class="table-dark">
           <tr>
             <th>#</th>
             <th>Name</th>
             <th>Score</th>
             <th>Date</th>
-            <th>Player Team</th>
           </tr>
         </thead>
-        <!-- Body of score table -->
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Gordon Freeman</td>
-            <td>34</td>
-            <td>May 20, 2021</td>
-            <td>Team Alyx</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Ron Swanson</td>
-            <td>29</td>
-            <td>June 2, 2021</td>
-            <td>Team Steak</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Walter White</td>
-            <td>7</td>
-            <td>July 3, 2020</td>
-            <td>Team Car Wash</td>
-          </tr>
-        </tbody>
+        <tbody id="scores"></tbody>
       </table>
     </main>
 
     <footer class="bg-dark text-dark text-muted">
-      <hr />
       <div class="container-fluid">
-        <span class="text-reset">Author: Mitchell Shumway</span>
-        <br />
-        <a class="text-reset" href="https://github.com/mshum345/simon.git">GitHub</a>
+        <span class="text-reset">Author Name(s)</span>
+        <a
+          class="text-reset"
+          href="https://github.com/webprogramming260/simon-javascript"
+          >Source</a
+        >
       </div>
     </footer>
-    <!-- Link to JS File -->
+
     <script src="scores.js"></script>
   </body>
 </html>

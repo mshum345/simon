@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Link to CSS File -->
-    <link rel="stylesheet" href="main.css" />
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
     <link rel="icon" href="favicon.ico" />
 
-    <!-- Include bootstrap CSS framework -->
+    <link rel="stylesheet" href="main.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,49 +17,50 @@
   </head>
   <body class="bg-dark text-light">
     <header class="container-fluid">
-      <h1>The Coolest Simon Game<sup>&reg;</sup></h1>
-
-      <!-- Navigation menu -->
-      <nav>
-        <menu>
-          <li><a class="nav-link" href="index.html">Login</a></li>
-          <li><a class="nav-link" href="play.html">Play</a></li>
-          <li><a class="nav-link" href="scores.html">Scores</a></li>
-          <li><a class="nav-link" href="about.html">About</a></li>
+      <nav class="navbar fixed-top navbar-dark">
+        <a class="navbar-brand" href="#">Simon<sup>&reg;</sup></a>
+        <menu class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="play.html">Play</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="scores.html">Scores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">About</a>
+          </li>
         </menu>
       </nav>
-
-      <hr />
     </header>
 
-    <!-- Descriptive information about the Simon game -->
     <main class="container-fluid bg-secondary text-center">
-      <p>
-        Simon is a repetitive memory game where you follow the demonstrated
-        color sequence until you make a mistake. The longer the sequence you
-        repeat, the greater your score.
-      </p>
+      <div>
+        <p>
+          Simon is a repetitive memory game where you follow the demonstrated
+          color sequence until you make a mistake. The longer the sequence you
+          repeat, the greater your score.
+        </p>
 
-      <p>
-        The name Simon is a registered trademark owned by Milton-Bradley. Our
-        use of the name and the game is for non-profit educational use only. No
-        part of this code or program should be used outside of that definition.
-      </p>
-
-      <!-- Credit given to the template github -->
-      <p>
-        Credit to the original github repository providing the simon-html template.
-        <a class="text-reset" href="https://github.com/webprogramming260/simon-html.git">GitHub</a>
-      </p>
-      
+        <p>
+          The name Simon is a registered trademark owned by Milton-Bradley. Our
+          use of the name and the game is for non-profit educational use only.
+          No part of this code or program should be used outside of that
+          definition.
+        </p>
+      </div>
     </main>
 
     <footer class="bg-dark text-dark text-muted">
-      <hr />
       <div class="container-fluid">
-        <span class="text-reset">Author: Mitchell Shumway</span>
-        <br />
-        <a class="text-reset" href="https://github.com/mshum345/simon.git">GitHub</a>
+        <span class="text-reset">Author Name(s)</span>
+        <a
+          class="text-reset"
+          href="https://github.com/webprogramming260/simon-javascript"
+          >Source</a
+        >
       </div>
     </footer>
   </body>
