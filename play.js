@@ -14,7 +14,7 @@ class Button {
   }
 
   paint(level) {
-    const background = `hsl(${this.hue}, 100%, ${level}%)`;
+    const background = `hsl(${this.hue+100}, 100%, ${level}%)`;
     this.el.style.backgroundColor = background;
   }
 
